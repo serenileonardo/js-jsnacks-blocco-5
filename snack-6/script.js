@@ -12,3 +12,9 @@ const zucchine = [
 ];
 
 // A partire dall'array fornito, crea due array. Uno con le zucchine più lunghe di almeno 15cm. L'altro con le restanti.
+
+const totalWeight = zucchine
+  .filter(zucchina => zucchina.length < 15)
+  .reduce((sum, zucchina) => sum + zucchina.weight, 0);
+
+console.log(totalWeight);
